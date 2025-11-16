@@ -199,4 +199,4 @@ You've now planned your N8N server setup! You should have:
 
 ---
 
-**Next:** [Chapter 3: Security Setup →](./../03-security/README.md)
+**Next:** [Chapter 2: Ubuntu Server Installation →](./../02-ubuntu-install/README.md)

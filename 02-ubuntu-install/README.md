@@ -247,4 +247,4 @@ sudo ufw --force enable
 
 ---
 
-**Next:** [Chapter 2: Planning Your N8N Server →](./../02-planning/README.md)
+**Next:** [Chapter 3: Security Setup →](./../03-security/README.md)

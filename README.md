@@ -14,16 +14,16 @@ This tutorial teaches you how to build a professional automation server with:
 
 ## 📚 Tutorial Structure
 
-### [1. Ubuntu Server Installation](./01-ubuntu-install/README.md)
+### [1. Planning Your N8N Server](./01-planning/README.md)
+- Choosing the right VPS provider
+- Server specifications and costs
+- Operating system selection
+
+### [2. Ubuntu Server Installation](./02-ubuntu-install/README.md)
 - Clean Ubuntu Server LTS setup
 - Drive partitioning and storage configuration
 - Network setup and remote access
 - Post-installation system preparation
-
-### [2. Planning Your N8N Server](./02-planning/README.md)
-- Choosing the right VPS provider
-- Server specifications and costs
-- Operating system selection
 
 ### [3. Security Setup](./03-security/README.md)
 - SSH key authentication
@@ -62,7 +62,7 @@ This tutorial teaches you how to build a professional automation server with:
 
 ## 🚀 Quick Start
 
-If you're new to server administration, start with [Chapter 1](./01-ubuntu-install/README.md) and follow each chapter in order.
+If you're new to server administration, start with [Chapter 1](./01-planning/README.md) and follow each chapter in order.
 
 ## 📋 Prerequisites
 
