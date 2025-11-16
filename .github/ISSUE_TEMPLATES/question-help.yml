@@ -1,0 +1,101 @@
+---
+name: Question/Help
+description: Ask a question or request help with the tutorial
+title: "[QUESTION] "
+labels: ["question", "help wanted"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ❓ Question/Help Request
+
+        Need help with the tutorial? We're here to help! Please provide as much detail as possible so we can assist you effectively.
+
+  - type: dropdown
+    id: question-type
+    attributes:
+      label: Question Type
+      description: What type of help do you need?
+      options:
+        - "Understanding a concept"
+        - "Troubleshooting an error"
+        - "Clarification of instructions"
+        - "Setup/configuration help"
+        - "General guidance"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: related-chapter
+    attributes:
+      label: Related Chapter
+      description: Which chapter is your question about?
+      options:
+        - "01-planning"
+        - "02-ubuntu-install"
+        - "03-security"
+        - "04-software"
+        - "05-n8n-deployment"
+        - "06-domain-https"
+        - "07-backup-system"
+        - "08-notifications"
+        - "09-git-setup"
+        - "bonus-contributing"
+        - "scripts"
+        - "General/tutorial-wide"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question-details
+    attributes:
+      label: Question Details
+      description: Please describe your question clearly and provide context
+      placeholder: |
+        I am trying to [describe what you're attempting].
+
+        I have already tried [list steps you've taken].
+
+        My specific question is [clear, focused question].
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background/Context
+      description: What led you to this question? Any relevant background information?
+      placeholder: |
+        I am [beginner/intermediate/expert] with [relevant experience].
+        I am using [OS, provider, etc.].
+        I have completed [which chapters so far].
+    validations:
+      required: false
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error Output/Screenshots (if applicable)
+      description: If you're getting an error, please include the output
+      placeholder: |
+        ```
+        paste error message here
+        ```
+
+        Or attach screenshots if relevant.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Before submitting, please check:
+      options:
+        - label: I have searched existing issues for similar questions
+          required: true
+        - label: I have re-read the relevant chapter(s)
+        - label: I have checked the troubleshooting sections
+        - label: This is not a bug report (use bug report template instead)

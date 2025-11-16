@@ -1,0 +1,111 @@
+---
+name: Documentation Improvement
+description: Suggest improvements to documentation, clarity, or structure
+title: "[DOCS] "
+labels: ["documentation", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 Documentation Improvement
+
+        Help make this tutorial clearer and more helpful! Suggest improvements to documentation, explanations, or structure.
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: Improvement Type
+      description: What type of documentation improvement are you suggesting?
+      options:
+        - "Clarity/Readability"
+        - "Additional explanations"
+        - "Better structure/organization"
+        - "Missing information"
+        - "Outdated content"
+        - "Formatting/typos"
+        - "Code examples"
+        - "Screenshots/diagrams"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-chapter
+    attributes:
+      label: Affected Chapter
+      description: Which chapter needs improvement?
+      options:
+        - "01-planning"
+        - "02-ubuntu-install"
+        - "03-security"
+        - "04-software"
+        - "05-n8n-deployment"
+        - "06-domain-https"
+        - "07-backup-system"
+        - "08-notifications"
+        - "09-git-setup"
+        - "bonus-contributing"
+        - "scripts"
+        - "README/general"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: Current Issue
+      description: What's unclear, missing, or could be improved?
+      placeholder: |
+        The current documentation [describe the problem].
+        For example: "The explanation of [topic] is confusing because..."
+        Or: "Chapter [X] is missing information about [topic]..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: How should this be improved?
+      placeholder: |
+        I suggest [describe your improvement].
+        This could include [additional content, rephrasing, new sections, etc.].
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific-location
+    attributes:
+      label: Specific Location
+      description: Can you point to the exact location that needs improvement?
+      placeholder: |
+        - Chapter: [chapter name]
+        - Section: [section name]
+        - Line/paragraph: [approximate location]
+        - URL: [if applicable]
+    validations:
+      required: false
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Do you have examples of good documentation or references?
+      placeholder: |
+        Similar to how [other tutorial/project] explains [topic].
+        Or: "I found this explanation in [source] to be much clearer..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please check all that apply
+      options:
+        - label: I have searched existing issues for similar documentation requests
+          required: true
+        - label: This improvement would help other users
+        - label: I can provide specific examples or wording suggestions
+        - label: I am willing to help implement this improvement

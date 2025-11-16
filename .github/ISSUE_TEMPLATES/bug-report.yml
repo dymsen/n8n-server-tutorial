@@ -1,0 +1,108 @@
+---
+name: Bug Report
+description: Report a bug or error in the tutorial
+title: "[BUG] "
+labels: ["bug", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+
+        Thanks for helping improve this tutorial! Please provide as much detail as possible to help us fix the issue quickly.
+
+  - type: input
+    id: tutorial-version
+    attributes:
+      label: Tutorial Version
+      description: Which version or commit of the tutorial are you using?
+      placeholder: e.g., latest, or specific commit hash
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-chapter
+    attributes:
+      label: Affected Chapter
+      description: Which chapter contains the bug?
+      options:
+        - "01-planning"
+        - "02-ubuntu-install"
+        - "03-security"
+        - "04-software"
+        - "05-n8n-deployment"
+        - "06-domain-https"
+        - "07-backup-system"
+        - "08-notifications"
+        - "09-git-setup"
+        - "bonus-contributing"
+        - "scripts"
+        - "README/general"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug Description
+      description: What is the bug? What happened vs. what should have happened?
+      placeholder: |
+        I was following the instructions in [chapter] when [describe what you were doing].
+
+        Expected: [what should have happened]
+        Actual: [what actually happened]
+
+        Error messages (if any):
+        ```
+        paste error output here
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Go to '...'
+        2. Run command '....'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide details about your setup
+      placeholder: |
+        - OS: [e.g., Ubuntu 24.04 LTS]
+        - VPS Provider: [e.g., Netcup, Hetzner]
+        - Podman/Docker version: [e.g., Podman 5.0.0]
+        - N8N version: [if applicable]
+        - Browser: [if web-related]
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help?
+      placeholder: Screenshots, links, or additional details
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      description: Please check all that apply
+      options:
+        - label: I have searched existing issues for this bug
+          required: true
+        - label: I have tried the latest version of the tutorial
+        - label: This bug affects the tutorial's functionality
+        - label: I am willing to help test a fix

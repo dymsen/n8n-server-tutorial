@@ -83,6 +83,24 @@ Every issue report, suggestion, or improvement makes this tutorial better for ev
 
 **Issues stay open until the problem is solved or the discussion concludes.**
 
+### Issue Templates
+
+**This tutorial provides guided issue templates to make contributing easier!** Instead of starting with a blank page, you'll see pre-formatted templates with:
+
+- **Structured sections** for different types of contributions
+- **Clear guidance** on what information to include
+- **Checklists** to ensure complete submissions
+- **Appropriate labels** automatically applied
+
+Available templates:
+- **🐛 Bug Report** - For errors, broken links, or incorrect commands
+- **✨ Feature Request** - For new content or improvements
+- **❓ Question/Help** - For getting assistance with the tutorial
+- **📚 Documentation Improvement** - For clarity or structure suggestions
+- **💬 General Feedback** - For sharing thoughts and experiences
+
+**Pro tip:** Choose the template that best matches your contribution type - it will guide you through providing all the necessary information!
+
 ### Issue States
 
 - **Open:** Active discussion or work in progress

@@ -1,0 +1,92 @@
+---
+name: General Feedback
+description: Share general feedback, suggestions, or ideas about the tutorial
+title: "[FEEDBACK] "
+labels: ["feedback", "triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💬 General Feedback
+
+        We value all feedback! Share your thoughts, experiences, or suggestions about the tutorial.
+
+  - type: dropdown
+    id: feedback-type
+    attributes:
+      label: Feedback Type
+      description: What type of feedback are you sharing?
+      options:
+        - "Positive feedback/praise"
+        - "General suggestions"
+        - "User experience feedback"
+        - "Success story"
+        - "General improvement ideas"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback-content
+    attributes:
+      label: Your Feedback
+      description: Please share your thoughts, experiences, or suggestions
+      placeholder: |
+        I [love/appreciate/would like to suggest] that...
+
+        My experience with the tutorial was [describe your experience].
+
+        One thing that could be improved is [suggestion].
+    validations:
+      required: true
+
+  - type: dropdown
+    id: experience-level
+    attributes:
+      label: Your Experience Level
+      description: How would you rate your technical experience?
+      options:
+        - "Complete beginner"
+        - "Some technical knowledge"
+        - "Intermediate user"
+        - "Advanced user"
+        - "Expert/professional"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: tutorial-completion
+    attributes:
+      label: Tutorial Completion Status
+      description: How far have you gotten in the tutorial?
+      options:
+        - "Just started"
+        - "Partway through"
+        - "Completed some chapters"
+        - "Completed entire tutorial"
+        - "Using in production"
+        - "Haven't started yet"
+    validations:
+      required: false
+
+  - type: textarea
+    id: specific-examples
+    attributes:
+      label: Specific Examples or Details
+      description: Can you provide specific examples or additional details?
+      placeholder: |
+        For example, [describe specific situation].
+        The part about [topic] was particularly [helpful/confusing/useful].
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contact-preference
+    attributes:
+      label: Contact Preferences
+      description: How would you like to be contacted about this feedback?
+      options:
+        - label: I am open to follow-up questions about this feedback
+        - label: Please acknowledge receipt of this feedback
+        - label: I would like to contribute further to this project
