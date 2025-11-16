@@ -80,7 +80,7 @@ Found an issue or want to improve this tutorial? The source is available on GitH
 
 ## 📞 Contact & Support
 
-**Author:** Olaf Klein - Owner of MonkeyTower Internet Agency
+**Author:** Olaf Klein - Owner of monkeytower internet agency
 
 For personalized help with VPS setup, N8N configuration, or server management:
 - **Website:** [www.olaf-klein.de](https://www.olaf-klein.de)
