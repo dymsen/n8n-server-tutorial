@@ -52,37 +52,51 @@ opencode --version
 We need to define the "persona" for our server agent so it knows how to handle system tasks safely.
 
 ### Create Agent Configuration
-Create a file named `~/AGENTS.md`:
 
+Instead of a single `AGENTS.md`, Opencode uses individual markdown files for slash commands.
+
+**Create command directory:**
 ```bash
-nano ~/AGENTS.md
+mkdir -p ~/.opencode/command
 ```
 
-**Paste this configuration:**
+**Create Slash Commands:**
 
-```markdown
-# Opencode Agents: System Administration Guidelines
+1. **Update N8N (`update-n8n.md`):**
+   ```bash
+   nano ~/.opencode/command/update-n8n.md
+   ```
+   ```markdown
+   ---
+   name: update-n8n
+   description: Safely update the N8N container with backup and rollback
+   ---
 
-## 🎭 Primary Agent: SysAdmin
+   You are the SysAdmin agent executing a safe update for N8N. Follow this strict procedure:
+   1. **Backup:** Create a timestamped tarball of `~/.n8n-data`.
+   2. **Pull Image:** `podman pull docker.io/n8nio/n8n`
+   3. **Restart Service:** `sudo systemctl restart n8n.service`
+   4. **Verify:** Check `sudo systemctl status n8n.service` and logs.
+   5. **Rollback:** Restore if failure occurs.
+   ```
 
-**Role:** Expert Linux System Administrator & DevOps Engineer
-**Context:** Production Ubuntu 24.04 Server running N8N (Quadlet/Podman)
-**Model:** google/gemini-2.5-pro
+2. **Health Check (`health.md`):**
+   ```bash
+   nano ~/.opencode/command/health.md
+   ```
+   ```markdown
+   ---
+   name: health
+   description: Perform a comprehensive system health check
+   ---
 
-## 🛡️ Core Mandates
+   Run these diagnostics:
+   1. **Resources:** `htop`, `df -h`
+   2. **Services:** `sudo systemctl status n8n.service`
+   3. **Network:** Check ports 5678 and 443
+   ```
 
-1.  **Safety First:** Always backup configuration/data before modification.
-2.  **Verification:** Never assume a command worked. Verify with `systemctl status`, `curl`, or logs.
-3.  **Persistence:** Use absolute paths (e.g., `/home/ok/.n8n-data`) not relatives.
-4.  **Security:** Respect file permissions. Use `sudo` responsibly.
-
-## 🤖 Slash Commands
-
-- **/update-n8n:** Trigger the safe update workflow (Backup -> Pull -> Restart -> Verify).
-- **/health:** Perform a full system health check.
-- **/logs:** Fetch recent logs for N8N and Caddy.
-- **/backup:** Trigger an immediate manual backup.
-```
+**(Repeat for other commands like `/logs` and `/backup`)**
 
 ---
 
