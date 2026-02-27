@@ -172,23 +172,23 @@ Research VPS providers that offer:
 
 ### Before You Start
 
-- [ ] Research and choose VPS provider
-- [ ] Calculate required server specifications
-- [ ] Register domain name (optional)
-- [ ] Set up billing/payment method
-- [ ] Review provider's terms of service
-- [ ] Check data center locations
+- [X] Research and choose VPS provider
+- [X] Calculate required server specifications
+- [X] Register domain name (optional)
+- [X] Set up billing/payment method
+- [X] Review provider's terms of service
+- [X] Check data center locations
 
 ### Account Setup
 
-- [ ] Create VPS provider account
-- [ ] Configure billing and payment
+- [X] Create VPS provider account
+- [X] Configure billing and payment
 - [ ] Set up account security (2FA recommended)
-- [ ] Review available server locations
+- [X] Review available server locations
 
 ### Pre-Installation Planning
 
-- [ ] Choose operating system (Ubuntu 24.04 LTS)
+- [X] Choose operating system (Ubuntu 24.04 LTS)
 - [ ] Plan server hostname and domain
 - [ ] Prepare SSH keys for secure access
 - [ ] Plan backup and monitoring strategy
